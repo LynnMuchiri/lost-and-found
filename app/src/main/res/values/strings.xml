@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lost and Found</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="login_label">Login</string>
+    <string name="signup_label">Signup</string>
+
+
+
+</resources>

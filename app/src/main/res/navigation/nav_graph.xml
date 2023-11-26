@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginActivity">
+
+    <fragment
+        android:id="@+id/LoginActivity"
+        android:name="com.example.lostandfound.LoginActivity"
+        tools:layout="@layout/activity_login">
+
+        <action
+            android:id="@+id/action_Login_to_Signup"
+            app:destination="@id/SignupActivity" />
+
+        <action
+            android:id="@+id/action_Login_to_Home"
+            app:destination="@id/HomeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/SignupActivity"
+        android:name="com.example.lostandfound.SignupActivity"
+        tools:layout="@layout/activity_signup">
+
+        <action
+            android:id="@+id/action_Signup_to_Login"
+            app:destination="@id/LoginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/HomeActivity"
+        android:name="com.example.lostandfound.HomeActivity"
+        tools:layout="@layout/activity_home">
+
+
+    </fragment>
+
+
+</navigation>

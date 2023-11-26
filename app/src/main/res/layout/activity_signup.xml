@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="167dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/front" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColorHint="#D3D3D3"
+        android:layout_marginTop="280dp"
+        android:gravity="top"
+        android:padding="20dp"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/outline_person_2_24"
+        android:drawablePadding="20dp"
+        android:autofillHints="abc@gmail.com" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="#D3D3D3"
+        android:layout_marginTop="330dp"
+        android:gravity="top"
+        android:padding="20dp"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/outline_mail_24"
+        android:drawablePadding="20dp"
+        android:autofillHints="abc@gmail.com" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="#D3D3D3"
+        android:layout_marginTop="380dp"
+        android:gravity="top"
+        android:padding="20dp"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/outline_lock_24"
+        android:drawablePadding="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="290dp"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/button"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="60dp"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="525dp"
+            android:text="Already have an account ?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="525dp"
+            android:text="Login"
+            android:textColor="#FFB434"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
