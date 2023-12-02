@@ -12,8 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LostandFound"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".ItemsPosted"
+            android:exported="false" />
+        <activity
+            android:name=".FoundItemsActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true"
@@ -24,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
