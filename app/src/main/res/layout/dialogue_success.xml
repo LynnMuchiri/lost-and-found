@@ -1,0 +1,59 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:background="@drawable/popup_background">
+    <!-- Set card background to transparent -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/popup_background"> <!-- Apply your custom drawable with the glow effect -->
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="@string/close" />
+
+        <ImageView
+            android:id="@+id/successIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/check"
+            android:contentDescription="@string/success" />
+
+        <TextView
+            android:id="@+id/approved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/successIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Approved!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white" />
+
+        <!-- Additional Views -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/approved"
+            android:layout_marginTop="8dp"
+            android:text="The claimant has been notified of the found item!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

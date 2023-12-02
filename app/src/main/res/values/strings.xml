@@ -4,6 +4,10 @@
     <!-- Strings used for fragments for navigation -->
     <string name="login_label">Login</string>
     <string name="signup_label">Signup</string>
+    <string name="close">Signup</string>
+    <string name="success">success</string>
+
+
 
 
 </resources>

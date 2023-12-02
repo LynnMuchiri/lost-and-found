@@ -17,7 +17,8 @@
         android:layout_marginTop="3dp"
         android:layout_marginBottom="-3dp"
         android:orientation="vertical"
-        android:paddingTop="16dp">
+        android:paddingTop="16dp"
+        android:paddingHorizontal="10dp">
 
         <!-- Location Found -->
         <TextView
@@ -27,29 +28,28 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="8dp">
 
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkbox_phase1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phase 1" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkbox_phase2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:text="Phase 2" />
-        </LinearLayout>
+        </RadioGroup>
 
         <!-- Building Found -->
-        <!-- Location Found -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,33 +57,33 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="8dp">
 
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkbox_msb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MSB 1" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkbox_stc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:text="STC" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkbox_stmb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:text="STMB" />
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView4"
