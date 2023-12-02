@@ -106,26 +106,25 @@
 
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/datefound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="0dp"
-                android:ems="10"
+                android:ems="15"
                 android:inputType="date" />
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/calendar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="-63dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="266dp"
+                android:layout_marginTop="-11dp"
                 app:srcCompat="@drawable/baseline_calendar_month_24" />
 
         </RelativeLayout>
