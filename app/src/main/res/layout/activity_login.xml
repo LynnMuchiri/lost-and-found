@@ -13,38 +13,57 @@
         android:background="@drawable/front" />
 
 
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
+        style="?attr/textInputFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textColorHint="#D3D3D3"
-        android:layout_marginTop="306dp"
+        android:layout_marginTop="300dp"
         android:gravity="top"
+        android:hint="Email"
         android:padding="20dp"
-        android:inputType="textEmailAddress"
-        android:drawableStart="@drawable/outline_mail_24"
-        android:drawablePadding="20dp"
-        android:autofillHints="abc@gmail.com" />
+        android:textColorHint="#D3D3D3"
+        app:helperTextEnabled="true"
+        app:helperText="abc@gmail.com"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:startIconDrawable="@drawable/outline_mail_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
+        style="?attr/textInputFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:textColorHint="#D3D3D3"
         android:layout_marginTop="360dp"
         android:gravity="top"
+        android:hint="Password"
         android:padding="20dp"
-        android:inputType="textPassword"
-        android:drawableStart="@drawable/outline_lock_24"
-        android:drawablePadding="20dp" />
+        android:textColorHint="#D3D3D3"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/outline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,7 +111,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="290dp"
-        android:layout_height="43dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="60dp"
         android:layout_marginTop="470dp"

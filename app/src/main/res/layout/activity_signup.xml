@@ -12,56 +12,86 @@
         android:layout_marginTop="80dp"
         android:background="@drawable/front" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
+        style="?attr/textInputFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:gravity="center_horizontal"
         android:hint="Username"
-        android:textColorHint="#D3D3D3"
-        android:layout_marginTop="280dp"
-        android:gravity="top"
         android:padding="20dp"
-        android:inputType="textEmailAddress"
-        android:drawableStart="@drawable/outline_person_2_24"
-        android:drawablePadding="20dp"
-        android:autofillHints="abc@gmail.com" />
+        android:textColorHint="#D3D3D3"
+        app:helperText="John Doe"
+        app:helperTextEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:startIconDrawable="@drawable/outline_person_2_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
+        style="?attr/textInputFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:gravity="top"
         android:hint="Email"
-        android:textColorHint="#D3D3D3"
-        android:layout_marginTop="330dp"
-        android:gravity="top"
         android:padding="20dp"
-        android:inputType="textEmailAddress"
-        android:drawableStart="@drawable/outline_mail_24"
-        android:drawablePadding="20dp"
-        android:autofillHints="abc@gmail.com" />
+        android:textColorHint="#D3D3D3"
+        app:helperTextEnabled="true"
+        app:helperText="abc@gmail.com"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:startIconDrawable="@drawable/outline_mail_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
+        style="?attr/textInputFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:textColorHint="#D3D3D3"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="360dp"
         android:gravity="top"
+        android:hint="Password"
         android:padding="20dp"
-        android:inputType="textPassword"
-        android:drawableStart="@drawable/outline_lock_24"
-        android:drawablePadding="20dp" />
+        android:textColorHint="#D3D3D3"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/outline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="290dp"
-        android:layout_height="43dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="470dp"
         android:background="@drawable/button"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="60dp"

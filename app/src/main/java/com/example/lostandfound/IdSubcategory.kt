@@ -1,41 +1,40 @@
 package com.example.lostandfound
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.lostandfound.databinding.ActivityHomeBinding
+import com.example.lostandfound.databinding.FragmentIdSubcategoryBinding
 
-class HomeActivity : Fragment() {
+class IdSubcategory : Fragment() {
 
-    private var _binding: ActivityHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentIdSubcategoryBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = ActivityHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentIdSubcategoryBinding.inflate(inflater,container,false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.findItemBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_category)
-        }
+//        binding.buttonFirst.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//        }
+//
+//        binding.button3.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_FifthFragment)
+//        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }
