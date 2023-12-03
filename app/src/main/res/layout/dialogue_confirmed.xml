@@ -11,9 +11,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="16dp"
-        android:background="@drawable/popup_background">
+        android:background="@drawable/popup_background"
+        android:layout_gravity="center_horizontal"
+        >
 
         <ImageView
             android:id="@+id/closeButton"
@@ -31,7 +33,9 @@
             android:layout_height="48dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/check"
-            android:contentDescription="@string/success" />
+            android:contentDescription="@string/success"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
 
 
@@ -42,9 +46,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/successIcon"
             android:layout_marginTop="8dp"
-            android:text="       Item Submitted Sucessfully. Check it on Items Post Page to confirm."
+            android:text="Item Submitted Sucessfully."
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/LoginActivity"
         android:name="com.example.lostandfound.LoginActivity"
+        android:label="Login"
         tools:layout="@layout/activity_login">
 
         <action
@@ -25,6 +26,7 @@
     <fragment
         android:id="@+id/SignupActivity"
         android:name="com.example.lostandfound.SignupActivity"
+        android:label="SignUp"
         tools:layout="@layout/activity_signup">
 
         <action
@@ -32,10 +34,11 @@
             app:destination="@id/LoginActivity" />
     </fragment>
 
-<!--    HomePage-->
+
     <fragment
         android:id="@+id/ClaimsActivity"
         android:name="com.example.lostandfound.ClaimsActivity"
+        android:label="Claims List"
         tools:layout="@layout/fragment_claims_activity">
         <action
             android:id="@+id/action_go_to_claim_info"
@@ -45,7 +48,9 @@
     <fragment
         android:id="@+id/HomeActivity"
         android:name="com.example.lostandfound.HomeActivity"
+        android:label="Lost and Found"
         tools:layout="@layout/activity_home">
+
         <action
             android:id="@+id/action_proceed_to_claims_list"
             app:destination="@id/ClaimsActivity" />
@@ -81,7 +86,94 @@
             android:id="@+id/action_home_to_Itemsposted"
             app:destination="@id/ItemsPosted" />
 
+        <action
+            android:id="@+id/action_home_to_category"
+            app:destination="@id/Category" />
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/LoginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/Category"
+        android:name="com.example.lostandfound.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category">
 
+        <action
+            android:id="@+id/action_category_to_DeviceSubCat"
+            app:destination="@id/DeviceSubCat" />
+        <action
+            android:id="@+id/action_category_to_AccessorySubCat"
+            app:destination="@id/AccessorySubCat" />
+        <action
+            android:id="@+id/action_category_to_ClothingSubCat"
+            app:destination="@id/ClothingSubCat" />
+        <action
+            android:id="@+id/action_category_to_IdSubCat"
+            app:destination="@id/IdSubCat" />
+        <action
+            android:id="@+id/action_category_to_BagsSubCat"
+            app:destination="@id/BagsSubCat" />
+    </fragment>
+    <fragment
+        android:id="@+id/DeviceSubCat"
+        android:name="com.example.lostandfound.DevicesSubcategory"
+        android:label="Device SubCategory"
+        tools:layout="@layout/fragment_devices_subcategory">
+
+    </fragment>
+    <fragment
+        android:id="@+id/AccessorySubCat"
+        android:name="com.example.lostandfound.AccessorySubcategory"
+        android:label="Accessory SubCategory"
+        tools:layout="@layout/fragment_accessory_subcategory">
+
+    </fragment>
+    <fragment
+        android:id="@+id/ClothingSubCat"
+        android:name="com.example.lostandfound.ClothingSubcategory"
+        android:label="Clothing SubCategory"
+        tools:layout="@layout/fragment_clothing_subcategory">
+
+    </fragment>
+    <fragment
+        android:id="@+id/IdSubCat"
+        android:name="com.example.lostandfound.IdSubcategory"
+        android:label="ID SubCategory"
+        tools:layout="@layout/fragment_id_subcategory">
+
+    </fragment>
+    <fragment
+        android:id="@+id/BagsSubCat"
+        android:name="com.example.lostandfound.BagsSubcategory"
+        android:label="Bags SubCategory"
+        tools:layout="@layout/fragment_bags_subcategory">
+
+        <action
+            android:id="@+id/action_BagsSubCat_to_FoundItems"
+            app:destination="@id/FoundItems" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FoundItems"
+        android:name="com.example.lostandfound.FoundItemsFragment"
+        android:label="Lost Items"
+        tools:layout="@layout/fragment_found_items">
+
+        <action
+            android:id="@+id/action_FoundItems_to_ClaimForm"
+            app:destination="@id/ClaimForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/ClaimForm"
+        android:name="com.example.lostandfound.ClaimFormFragment"
+        android:label="Claim Form"
+        tools:layout="@layout/fragment_claim_form">
+
+        <action
+            android:id="@+id/action_ClaimForm_to_Home"
+            app:destination="@id/HomeActivity" />
     </fragment>
 
 
@@ -98,8 +190,9 @@
         android:name="com.example.lostandfound.ItemsPosted"
         tools:layout="@layout/activity_items_posted">
 
-
-
+        <action
+            android:id="@+id/action_ItemsPosted_to_ClaimsList"
+            app:destination="@id/ClaimsActivity" />
 
 
 
