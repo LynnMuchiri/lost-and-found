@@ -19,7 +19,8 @@
         android:layout_marginTop="15dp"
         android:clickable="true"
         android:src="@drawable/baseline_notifications_active_24"
-        android:backgroundTint="#FFB434" />
+        android:contentDescription="fab_description2"
+    android:backgroundTint="#FFB434" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -30,7 +31,9 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:clickable="true"
-        android:src="@drawable/baseline_power_settings_new_24"
+        android:contentDescription="fab_description"
+
+    android:src="@drawable/baseline_power_settings_new_24"
         app:backgroundTint="#FFB434" />
 
     <ImageView
@@ -112,6 +115,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/postItemFound"
             android:layout_width="100dp"
             android:layout_height="0dp"
             android:layout_row="1"
@@ -151,6 +155,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/MyItems"
             android:layout_width="100dp"
             android:layout_height="0dp"
             android:layout_row="2"

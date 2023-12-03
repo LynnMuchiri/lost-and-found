@@ -6,17 +6,41 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.lostandfound.databinding.ActivityHomeBinding
+import com.example.lostandfound.databinding.ActivityItemsPostedBinding
+import com.example.lostandfound.databinding.ActivityMainBinding
 
 class ItemsPosted : AppCompatActivity() {
+
+
+    private  var _binding: ActivityItemsPostedBinding?=null
+
+
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items_posted)
 
 
-    val viewClaimButton = findViewById<Button>(R.id.view_claims)
+
+        _binding = ActivityItemsPostedBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+
+        val viewClaimButton = findViewById<Button>(R.id.view_claims)
     viewClaimButton.setOnClickListener{
         showPopupDialog()
     }
+
+
 
 }
         private fun showPopupDialog() {

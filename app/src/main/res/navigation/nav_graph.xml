@@ -17,7 +17,11 @@
         <action
             android:id="@+id/action_Login_to_Home"
             app:destination="@id/HomeActivity" />
+
+
     </fragment>
+
+
     <fragment
         android:id="@+id/SignupActivity"
         android:name="com.example.lostandfound.SignupActivity"
@@ -27,13 +31,43 @@
             android:id="@+id/action_Signup_to_Login"
             app:destination="@id/LoginActivity" />
     </fragment>
+
+<!--    HomePage-->
     <fragment
         android:id="@+id/HomeActivity"
         android:name="com.example.lostandfound.HomeActivity"
         tools:layout="@layout/activity_home">
 
+        <action
+            android:id="@+id/action_home_to_ItemsFound"
+            app:destination="@id/ItemsFound" />
+
+        <action
+            android:id="@+id/action_home_to_Itemsposted"
+            app:destination="@id/ItemsPosted" />
+
 
     </fragment>
+
+    <fragment
+        android:id="@+id/ItemsFound"
+        android:name="com.example.lostandfound.ItemsFound"
+        tools:layout="@layout/fragment_items_found">
+
+
+    </fragment>
+
+    <activity
+        android:id="@+id/ItemsPosted"
+        android:name="com.example.lostandfound.ItemsPosted"
+        tools:layout="@layout/activity_items_posted">
+
+
+
+
+
+
+    </activity>
 
 
 </navigation>
