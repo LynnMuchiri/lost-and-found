@@ -6,30 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ClaimFormFragment">
 
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#FFB434"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:title="Claim Item"-->
-<!--        android:elevation="10dp"-->
-<!--        />-->
-
     <ScrollView
+        android:id="@+id/ClaimScrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_alignBottom="@id/bottom_nav"
+        android:layout_marginBottom="80dp">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="15dp"
             android:paddingHorizontal="12dp"
+            android:paddingTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingStart="5dp"
-                >
+                android:paddingStart="5dp">
 
                 <RadioButton
                     android:id="@+id/radioButton"
@@ -78,66 +67,65 @@
                 android:clipChildren="true"
                 android:paddingStart="5dp">
 
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="0"
-                        android:layout_column="0"
-                        android:layout_columnWeight="0"
-                        android:text="Central Building" />
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="0"
+                    android:text="Central Building" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="0"
-                        android:layout_column="1"
-                        android:layout_columnWeight="0"
-                        android:text="STC" />
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="0"
+                    android:text="STC" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="1"
-                        android:layout_rowWeight="0"
-                        android:layout_column="0"
-                        android:layout_columnWeight="0"
-                        android:text="STM Building" />
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="0"
+                    android:text="STM Building" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="1"
-                        android:layout_rowWeight="0"
-                        android:layout_column="1"
-                        android:layout_columnWeight="0"
-                        android:text="MSB" />
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="0"
+                    android:text="MSB" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="2"
-                        android:layout_rowWeight="0"
-                        android:layout_column="0"
-                        android:layout_columnWeight="0"
-                        android:text="Library" />
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="0"
+                    android:text="Library" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="2"
-                        android:layout_rowWeight="0"
-                        android:layout_column="1"
-                        android:layout_columnWeight="0"
-                        android:text="Oval Building" />
-
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="0"
+                    android:text="Oval Building" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -160,38 +148,36 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Date Lost"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                />
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/datelost"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:hint="Date"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
-                app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                app:endIconMode="custom"
-                app:endIconDrawable="@drawable/calendar_week_svgrepo_com"
+                android:layout_marginTop="10dp"
                 android:clickable="true"
-                >
+                android:hint="Date"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/calendar_week_svgrepo_com"
+                app:endIconMode="custom"
+                app:hintAnimationEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"/>
+                    android:inputType="date" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Time Range Lost"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -200,8 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingStart="5dp"
-                >
+                android:paddingStart="5dp">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Texttime1"
@@ -209,15 +194,14 @@
                     android:layout_height="wrap_content"
                     android:hint="From"
                     app:boxStrokeWidth="2dp"
-                    app:hintAnimationEnabled="true"
-                    app:endIconMode="custom"
                     app:endIconDrawable="@drawable/clock_two_svgrepo_com"
-                    >
+                    app:endIconMode="custom"
+                    app:hintAnimationEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="time"/>
+                        android:inputType="time" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -225,8 +209,8 @@
                     android:id="@+id/spacer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="-"
                     android:paddingHorizontal="15dp"
+                    android:text=""
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -236,15 +220,14 @@
                     android:layout_height="wrap_content"
                     android:hint="To"
                     app:boxStrokeWidth="2dp"
-                    app:hintAnimationEnabled="true"
-                    app:endIconMode="custom"
                     app:endIconDrawable="@drawable/clock_two_svgrepo_com"
-                    >
+                    app:endIconMode="custom"
+                    app:hintAnimationEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="time"/>
+                        android:inputType="time" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,8 +237,8 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Describe The Item"
                 android:layout_marginTop="10dp"
+                android:text="Describe The Item"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -263,11 +246,10 @@
                 android:id="@+id/description"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:hint="Description"
                 android:layout_marginStart="5dp"
+                android:hint="Description"
                 app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                >
+                app:hintAnimationEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -279,8 +261,8 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile Number"
                 android:layout_marginTop="10dp"
+                android:text="Mobile Number"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -288,11 +270,10 @@
                 android:id="@+id/ClaimantMobile"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:hint="Mobile No"
                 android:layout_marginStart="5dp"
+                android:hint="Mobile No"
                 app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                >
+                app:hintAnimationEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -305,20 +286,32 @@
                 android:id="@+id/SubmitClaim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SUBMIT CLAIM"
-                android:textSize="16sp"
-                android:paddingHorizontal="30dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/roundedstyle"
-                android:backgroundTint="#FFB434"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp"
-                android:textStyle="bold"
-                />
+                android:background="@drawable/roundedstyle"
+                android:backgroundTint="#FFB434"
+                android:paddingHorizontal="30dp"
+                android:text="SUBMIT CLAIM"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
 
     </ScrollView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:elevation="4dp"
+        />
 
 
 </RelativeLayout>
