@@ -27,9 +27,9 @@ class claim_success :DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.successContinue.setOnClickListener {
-            findNavController().navigate(R.id.action_going_to_the_items_posted)
-        }
+//
+//        binding.successContinue.setOnClickListener {
+//            findNavController().navigate(R.id.action_going_to_the_items_posted)
+//        }
 
 }}
