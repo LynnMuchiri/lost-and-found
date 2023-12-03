@@ -18,6 +18,7 @@
         android:foregroundGravity="center_horizontal"
         android:background="@drawable/logo_lostnfound" />
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -151,4 +152,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </RelativeLayout>

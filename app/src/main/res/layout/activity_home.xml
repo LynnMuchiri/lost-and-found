@@ -135,7 +135,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/PostItemBtn"
+                android:id="@+id/postItemFound"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_row="0"
@@ -173,7 +173,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ItemsPostedBtn"
+                android:id="@+id/MyItems"
                 android:layout_width="175dp"
                 android:layout_height="200dp"
                 android:layout_row="1"

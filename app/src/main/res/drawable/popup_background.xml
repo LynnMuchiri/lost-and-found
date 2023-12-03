@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer glow effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <!-- Outer shadow size -->
+            <corners android:radius="16dp" />
+            <!-- The padding here determines the size of the glow -->
+            <padding
+                android:top="12dp"
+                android:left="12dp"
+                android:right="12dp"
+                android:bottom="12dp" />
+        </shape>
+    </item>
+    <!-- Actual card background with yellow color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/yellow" />
+            <!-- Match this radius with your CardView's corner radius -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>
