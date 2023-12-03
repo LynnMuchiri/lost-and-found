@@ -11,7 +11,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.LostandFound"
+
+
         tools:targetApi="31">
+        <activity
+            android:name=".ItemsPosted"
+            android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true"
@@ -23,6 +29,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

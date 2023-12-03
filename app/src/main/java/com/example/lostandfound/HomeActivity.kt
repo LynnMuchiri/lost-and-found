@@ -31,8 +31,14 @@ class HomeActivity : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.itemsPosted.setOnClickListener {
-            findNavController().navigate(R.id.action_proceed_to_claims_list)
+
+        binding.postItemFound.setOnClickListener{
+            findNavController().navigate(R.id.action_home_to_ItemsFound)
+        }
+
+        binding.MyItems.setOnClickListener{
+            findNavController().navigate(R.id.action_home_to_Itemsposted)
+
         }
 
 
