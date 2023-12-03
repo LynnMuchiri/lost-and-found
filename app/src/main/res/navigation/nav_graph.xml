@@ -34,9 +34,44 @@
 
 <!--    HomePage-->
     <fragment
+        android:id="@+id/ClaimsActivity"
+        android:name="com.example.lostandfound.ClaimsActivity"
+        tools:layout="@layout/fragment_claims_activity">
+        <action
+            android:id="@+id/action_go_to_claim_info"
+            app:destination="@id/Claim_Info" />
+
+    </fragment>
+    <fragment
         android:id="@+id/HomeActivity"
         android:name="com.example.lostandfound.HomeActivity"
         tools:layout="@layout/activity_home">
+        <action
+            android:id="@+id/action_proceed_to_claims_list"
+            app:destination="@id/ClaimsActivity" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/Claim_Info"
+        android:name="com.example.lostandfound.claimInfoFragment"
+        tools:layout="@layout/fragment_claim_info">
+        <action
+            android:id="@+id/action_back_to_claims_list"
+            app:destination="@id/ClaimsActivity" />
+        <action
+            android:id="@+id/action_claim_success"
+            app:destination="@id/claim_success" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/claim_success"
+        android:name="com.example.lostandfound.claim_success"
+        tools:layout="@layout/fragment_claim_success">
+        <action
+            android:id="@+id/action_going_to_the_items_posted"
+            app:destination="@id/HomeActivity" />
 
         <action
             android:id="@+id/action_home_to_ItemsFound"
@@ -48,6 +83,7 @@
 
 
     </fragment>
+
 
     <fragment
         android:id="@+id/ItemsFound"
@@ -68,6 +104,7 @@
 
 
     </activity>
+
 
 
 </navigation>

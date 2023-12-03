@@ -167,6 +167,7 @@
             app:cardElevation="12dp">
 
             <LinearLayout
+                android:id="@+id/items_posted"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#274AA5"
@@ -186,6 +187,7 @@
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
+
 
 
             </LinearLayout>
