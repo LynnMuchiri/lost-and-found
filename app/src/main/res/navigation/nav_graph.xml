@@ -45,18 +45,15 @@
             app:destination="@id/Claim_Info" />
 
     </fragment>
-    <fragment
-        android:id="@+id/HomeActivity"
-        android:name="com.example.lostandfound.HomeActivity"
-        android:label="Lost and Found"
-        tools:layout="@layout/activity_home">
 
-        <action
-            android:id="@+id/action_proceed_to_claims_list"
-            app:destination="@id/ClaimsActivity" />
+    <fragment
+        android:id="@+id/claim_success"
+        android:name="com.example.lostandfound.claim_success"
+        tools:layout="@layout/fragment_claim_success">
 
 
     </fragment>
+
     <fragment
         android:id="@+id/Claim_Info"
         android:name="com.example.lostandfound.claimInfoFragment"
@@ -71,12 +68,14 @@
 
     </fragment>
     <fragment
-        android:id="@+id/claim_success"
-        android:name="com.example.lostandfound.claim_success"
-        tools:layout="@layout/fragment_claim_success">
-        <action
-            android:id="@+id/action_going_to_the_items_posted"
-            app:destination="@id/HomeActivity" />
+        android:id="@+id/HomeActivity"
+        android:name="com.example.lostandfound.HomeActivity"
+        android:label="Lost and Found"
+        tools:layout="@layout/activity_home">
+
+<!--        <action-->
+<!--            android:id="@+id/action_going_to_the_items_posted"-->
+<!--            app:destination="@id/HomeActivity" />-->
 
         <action
             android:id="@+id/action_home_to_ItemsFound"
@@ -165,6 +164,7 @@
             android:id="@+id/action_FoundItems_to_ClaimForm"
             app:destination="@id/ClaimForm" />
     </fragment>
+
     <fragment
         android:id="@+id/ClaimForm"
         android:name="com.example.lostandfound.ClaimFormFragment"
@@ -188,13 +188,12 @@
     <activity
         android:id="@+id/ItemsPosted"
         android:name="com.example.lostandfound.ItemsPosted"
+        android:label="Items Posted"
         tools:layout="@layout/activity_items_posted">
 
         <action
             android:id="@+id/action_ItemsPosted_to_ClaimsList"
             app:destination="@id/ClaimsActivity" />
-
-
 
     </activity>
 
