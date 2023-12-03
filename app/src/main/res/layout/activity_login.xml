@@ -55,47 +55,49 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        style="?attr/textInputFilledStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="top"
-        android:hint="Email"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true"
-        app:startIconDrawable="@drawable/outline_mail_24">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            style="?attr/textInputFilledStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="30dp"
+            android:gravity="top"
+            android:hint="Email"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            app:boxBackgroundColor="#FFFFFF"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:startIconDrawable="@drawable/outline_mail_24">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
-        style="?attr/textInputFilledStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top"
-        android:hint="Password"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/outline_lock_24">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            style="?attr/textInputFilledStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:gravity="top"
+            android:hint="Password"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            app:boxBackgroundColor="#FFFFFF"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/outline_lock_24">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/forgotpass"
