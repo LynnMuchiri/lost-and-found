@@ -15,10 +15,7 @@ import com.example.lostandfound.databinding.ActivityMainBinding
 
 class ItemsPosted : AppCompatActivity() {
 
-
-    private var _binding: ActivityItemsPostedBinding?=null
-
-
+    private var _binding: ActivityItemsPostedBinding? =null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -36,16 +33,19 @@ class ItemsPosted : AppCompatActivity() {
 
         binding.viewClaims.setOnClickListener {
             val navController = findNavController(R.id.nav_host_fragment_content_main)
-            navController.navigate(R.id.action_FoundItems_to_ClaimForm)
+            navController.navigate(R.id.ClaimsActivity)
         }
 //        val viewClaimButton = findViewById<Button>(R.id.view_claims)
 //    viewClaimButton.setOnClickListener{
 //        findNavController().navigate(R.id.action_ItemsPosted_to_ClaimsList)
 //    }
 
-
-
 }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 //        private fun showPopupDialog() {
 //            val dialog = Dialog(this)
 //            dialog.setContentView(R.layout.dialogue_success)

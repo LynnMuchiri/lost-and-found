@@ -1,16 +1,22 @@
 package com.example.lostandfound
 
 import android.app.DatePickerDialog
+import android.app.Dialog
+import android.app.TimePickerDialog
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.DatePicker
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.lostandfound.databinding.FragmentClaimFormBinding
+import com.google.android.material.textfield.TextInputEditText
+import java.util.Locale
 
-class ClaimFormFragment : Fragment(), DatePickerDialog.OnDateSetListener {
+class ClaimFormFragment : Fragment() {
 
     private var _binding: FragmentClaimFormBinding? = null
     private val binding get() = _binding!!
@@ -27,13 +33,18 @@ class ClaimFormFragment : Fragment(), DatePickerDialog.OnDateSetListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        binding.datelost.setOnClickListener { showDatePickerDialog() }
+        binding.Texttime1.setOnClickListener {
+            setupTimePicker(binding.Texttime1)
+        }
+        binding.Texttime2.setOnClickListener {
+            setupTimePicker(binding.Texttime2)
+        }
         binding.SubmitClaim.setOnClickListener {
+            showPopupDialog()
             findNavController().navigate(R.id.action_ClaimForm_to_Home)
         }
-
-//        binding.datelost.setOnClickListener{
-//            val datePickerDialog = DatePickerDialog(MainActivity,this, 2023,3,3)
-//        }
 
     }
 
@@ -42,22 +53,75 @@ class ClaimFormFragment : Fragment(), DatePickerDialog.OnDateSetListener {
         _binding = null
     }
 
-    override fun onDateSet(p0: DatePicker?, year: Int, month: Int, date: Int) {
-        month+1
+    private fun showDatePickerDialog() {
+        // Use the current date as the default date in the picker
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
 
-        var dayStr: String = date.toString()
-        var monthStr = month.toString()
+        // Create a new instance of DatePickerDialog and return it
+        val datePickerDialog =
+            DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
+                // The callback received when the user "sets" the date in the dialog
 
-        if (dayStr.length == 1) dayStr = "0$dayStr"
+                binding.datelost.setText(
+                    String.format(
+                        Locale.getDefault(),
+                        "%d-%d-%d",
+                        selectedYear,
+                        selectedMonth + 1,
+                        selectedDay
+                    )
+                )
+            }, year, month, day)
 
-        if (monthStr.length == 1) monthStr = "0$monthStr"
 
-        // dd/mm/yyyy format set.
-
-        // dd/mm/yyyy format set.
-        binding.datelost.editText?.setText("$dayStr/$monthStr/$year")
-
+        datePickerDialog.show()
     }
 
+
+    private fun setupTimePicker(textInputEditText: TextInputEditText) {
+        textInputEditText.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            val hour = calendar.get(Calendar.HOUR_OF_DAY)
+            val minute = calendar.get(Calendar.MINUTE)
+
+            val timePickerDialog = TimePickerDialog(
+                requireContext(),
+                { _, selectedHour, selectedMinute ->
+                    // Format the selected time and set it to the TextInputEditText
+                    textInputEditText.setText(
+                        String.format(
+                            Locale.getDefault(),
+                            "%02d:%02d",
+                            selectedHour,
+                            selectedMinute
+                        )
+                    )
+                },
+                hour, minute, true // 'true' to use 24-hour format
+            )
+
+            timePickerDialog.show()
+        }
+    }
+
+
+    private fun showPopupDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.dialog_claim)
+        dialog.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val closeButton = dialog.findViewById<ImageView>(R.id.closeButton)
+        closeButton.setOnClickListener { dialog.dismiss() }
+
+        dialog.show()
+
+    }
 
 }
