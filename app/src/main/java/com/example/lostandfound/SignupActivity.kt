@@ -32,6 +32,10 @@ class SignupActivity : Fragment() {
         binding.signin.setOnClickListener {
             findNavController().navigate(R.id.action_Signup_to_Login)
         }
+
+        binding.register.setOnClickListener {
+            findNavController().navigate(R.id.action_Signup_to_Login)
+        }
     }
 
     override fun onDestroyView() {
